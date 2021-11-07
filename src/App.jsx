@@ -18,6 +18,12 @@ export const App = () => {
     setTodoText("");
   };
 
+  const onClickDelete = (index) => {
+    const newTodos = [...imcompleteTodos];
+    newTodos.splice(index, 1);
+    setIncompleteTodos(newTodos);
+  };
+
   return (
     <>
       <div className="input-area">
@@ -31,12 +37,12 @@ export const App = () => {
       <div className="incomplete-area">
         <h2 className="title">未完了のTODO</h2>
         <ul>
-          {imcompleteTodos.map((todo) => {
+          {imcompleteTodos.map((todo, index) => {
             return (
               <li key={todo} className="list-item">
                 <p className="list-item-lead">{todo}</p>
                 <button>完了</button>
-                <button>削除</button>
+                <button onClick={() => onClickDelete(index)}>削除</button>
               </li>
             );
           })}
