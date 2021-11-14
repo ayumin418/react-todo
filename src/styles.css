@@ -25,14 +25,6 @@ button:hover {
   color: #fff;
 }
 
-.input-area {
-  width: 400px;
-  margin: 8px;
-  padding: 8px;
-  background-color: #c1ffff;
-  border-radius: 5px;
-}
-
 .incomplete-area {
   width: 400px;
   min-height: 200px;
