@@ -1,7 +1,16 @@
+const style = {
+  width: "400px",
+  minHeight: "200px",
+  margin: "8px",
+  padding: "8px",
+  backgroundColor: "#c6ffe2",
+  borderRadius: "5px"
+};
+
 export const IncompleteTodos = (props) => {
   const { todos, onClickComplete, onClickDelete } = props;
   return (
-    <div className="incomplete-area">
+    <div style={style}>
       <h2 className="title">未完了のTODO</h2>
       <ul>
         {todos.map((todo, index) => {
